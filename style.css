@@ -1,0 +1,83 @@
+/* Core Styling & Variables */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #333333;
+    --primary-color: #24292e;
+    --accent-color: #0366d6;
+    --card-bg: #f6f8fa;
+}
+
+[data-theme="dark"] {
+    --bg-color: #0d1117;
+    --text-color: #c9d1d9;
+    --primary-color: #f0f6fc;
+    --accent-color: #58a6ff;
+    --card-bg: #161b22;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--card-bg);
+}
+
+.logo { font-weight: bold; font-size: 1.2rem; }
+
+/* Hero Section */
+.hero-section {
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.highlight { color: var(--accent-color); }
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--text-color);
+    background: transparent;
+    color: var(--text-color);
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.primary-btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Responsive Project Grid */
+.projects-section { padding: 2rem; max-width: 1000px; margin: 0 auto; }
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.project-link { color: var(--accent-color); text-decoration: none; font-weight: bold; }
+
+footer { text-align: center; padding: 2rem; font-size: 0.9rem; opacity: 0.7; }
